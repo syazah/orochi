@@ -6,7 +6,7 @@ function Marquee() {
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: "Infinity", duration: 5 }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
           className="text-[12vw] leading-none font-semibold uppercase -mb-8 pt-8 font-['Founders_Grotesk']"
         >
           we are ochi
@@ -14,7 +14,15 @@ function Marquee() {
         <motion.h1
           initial={{ x: 0 }}
           animate={{ x: "-100%" }}
-          transition={{ ease: "linear", repeat: "Infinity", duration: 5 }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
+          className="text-[12vw] leading-none font-semibold uppercase -mb-8 pt-8 font-['Founders_Grotesk']"
+        >
+          we are ochi
+        </motion.h1>
+        <motion.h1
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{ ease: "linear", repeat: Infinity, duration: 5 }}
           className="text-[12vw] leading-none font-semibold uppercase -mb-8 pt-8 font-['Founders_Grotesk']"
         >
           we are ochi
