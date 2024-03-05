@@ -2,25 +2,24 @@ import { FaLongArrowAltUp } from "react-icons/fa";
 function Landing() {
   return (
     <div className="w-full h-screen bg-zinc-900 pt-1">
-      <div className="textstructure mt-40 px-20">
-        <div className="masker">
-          <h1 className="uppercase tracking-tighter font-medium text-[7.5vw] font-['Founders_Grotesk']">
-            WE CREATE
-          </h1>
-        </div>
-        <div className="masker mt-[-60px]">
-          <h1 className="uppercase tracking-tighter font-medium text-[7.5vw] font-['Founders_Grotesk']">
-            EYE OPENING
-          </h1>
-        </div>
-        <div className="masker   mt-[-60px]">
-          <h1 className="uppercase tracking-tighter font-medium text-[7.5vw] font-['Founders_Grotesk']">
-            PRESENTATIONS
-          </h1>
-        </div>
+      <div className="textstructure mt-44 px-10">
+        {["WE CREATE", "EYE OPENING", "PRESENTATIONS"].map((item, index) => {
+          return (
+            <div key={index} className="masker">
+              <div className="w-fit flex items-end  ">
+                {index === 1 && (
+                  <div className="mr-5 w-[8vw] rounded-md h-[5.3vw] relative -top-[1.2vw] bg-red-500"></div>
+                )}
+                <h1 className="uppercase tracking-tighter -mb-[1vw] leading-[7vw] font-medium text-[7.5vw] font-['Founders_Grotesk']">
+                  {item}
+                </h1>
+              </div>
+            </div>
+          );
+        })}
       </div>
 
-      <div className="border-t-[1px] border-zinc-800 flex justify-between items-center py-5 px-20">
+      <div className="border-t-[1px] border-zinc-800 flex justify-between items-center py-5 px-10 mt-[8vw]">
         {[
           "For public and private companies",
           "From the first pitch to IPO",
