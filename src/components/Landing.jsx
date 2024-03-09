@@ -1,14 +1,25 @@
+import { motion } from "framer-motion";
 import { FaLongArrowAltUp } from "react-icons/fa";
 function Landing() {
   return (
-    <div className="w-full h-screen bg-zinc-900 pt-1">
+    <div
+      data-scroll
+      data-scroll-section
+      data-scroll-speed="-.3"
+      className="w-full h-screen bg-zinc-900 pt-1"
+    >
       <div className="textstructure mt-44 px-10">
         {["WE CREATE", "EYE OPENING", "PRESENTATIONS"].map((item, index) => {
           return (
             <div key={index} className="masker">
               <div className="w-fit flex items-end  ">
                 {index === 1 && (
-                  <div className="mr-5 w-[8vw] rounded-md h-[5.3vw] relative -top-[1.2vw] bg-red-500"></div>
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: "9vw" }}
+                    transition={{ ease: [0.76, 0, 0.24, 1], duration: 1 }}
+                    className="bg-[url('https://ochi.design/wp-content/uploads/2022/04/content-image01.jpg')] bg-cover bg-center mr-5 w-[8vw] rounded-md h-[5.3vw] relative -top-[1.2vw] bg-red-500"
+                  ></motion.div>
                 )}
                 <h1 className="uppercase tracking-tighter -mb-[1vw] leading-[7vw] font-medium text-[7.5vw] font-['Founders_Grotesk']">
                   {item}
